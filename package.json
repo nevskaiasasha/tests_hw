@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/nevskaiasasha/tests_hw/issues"
   },
-  "homepage": "https://github.com/nevskaiasasha/tests_hw#readme"
+  "homepage": "https://github.com/nevskaiasasha/tests_hw#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }
