@@ -4,8 +4,7 @@ class Circle {
   }
 
   area() {
-    const area = 3 * this.radius * this.radius;
-    return area;
+    return 3 * this.radius * this.radius;
   }
 
   perimeter() {
