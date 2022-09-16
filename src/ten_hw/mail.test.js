@@ -9,14 +9,14 @@ describe("RegExp: mail", () => {
 
 describe("RegExp: mail", () => {
   it("expected to match mail regex", () => {
-    const str = "23.06";
+    const str = "tuoe@gmail.com";
     expect(str).toMatch(reg);
   });
 });
 
 describe("RegExp: mail", () => {
   it("expected to match mail regex", () => {
-    const str = "@ya.ru";
+    const str = "aidnf@ya.ru";
     expect(str).toMatch(reg);
   });
 });
