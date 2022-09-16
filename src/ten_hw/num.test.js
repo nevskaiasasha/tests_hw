@@ -9,14 +9,14 @@ describe("RegExp: phone", () => {
 
 describe("RegExp: phone", () => {
   it("expected to match phone regex", () => {
-    const str = "+7 999 9fghtht99-99-99";
+    const str = "+7 979 939-89-90";
     expect(str).toMatch(reg);
   });
 });
 
 describe("RegExp: phone", () => {
   it("expected to match phone regex", () => {
-    const str = "+7 9699 ";
+    const str = "+79699473581";
     expect(str).toMatch(reg);
   });
 });
