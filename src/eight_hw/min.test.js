@@ -2,6 +2,9 @@ import { getMinutesToday } from "./min";
 
 describe("minutes passed", () => {
   it("returns number of minutes", () => {
-    expect(getMinutesToday()).toEqual(796);
+    jest.useFakeTimers();
+    jest.setSystemTime(new Date("2022-01-01"));
+    const date = new Date();
+    expect(getMinutesToday(date)).toEqual(0);
   });
 });
