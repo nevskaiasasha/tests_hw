@@ -2,6 +2,6 @@ import { getMinutesToday } from "./min";
 
 describe("minutes passed", () => {
   it("returns number of minutes", () => {
-    expect(getMinutesToday()).toEqual(582);
+    expect(getMinutesToday()).toEqual(583);
   });
 });
