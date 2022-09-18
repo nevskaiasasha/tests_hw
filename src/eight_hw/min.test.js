@@ -3,8 +3,8 @@ import { getMinutesToday } from "./min";
 describe("minutes passed", () => {
   it("returns number of minutes", () => {
     jest.useFakeTimers();
-    jest.setSystemTime(new Date("2017-11-25T12:00:56z"));
+    jest.setSystemTime(new Date("2022-01-01"));
     const date = new Date();
-    expect(getMinutesToday(date)).toEqual(900);
+    expect(getMinutesToday(date)).toEqual(180);
   });
 });
