@@ -1,15 +1,18 @@
-import { user, clone } from "./john";
+import { User } from "./john";
+
+jest.spyOn(window, "prompt").mockReturnValue(12);
 
 describe("objects", () => {
+  const adm = new User("admin");
+  it("should have a name", () => {
+    expect(adm.name).toContain("admin");
+  });
   it("callFn alerts value entered to prompt", () => {
-    jest.spyOn(window, "prompt").mockReturnValue(12);
-    expect(user.age).toEqual(12);
+    expect(adm.age).toBe(12);
   });
-  it("clones object", () => {
-    expect(clone).toHaveProperty("name");
-  });
-  it("checks role field", () => {
-    expect(clone.role).toEqual("admin");
+  it("should be able to add new property", () => {
+    adm.role = "admin";
+    expect(adm).toHaveProperty("role");
   });
   afterAll(() => {
     jest.clearAllMocks();

@@ -1,13 +1,8 @@
-const user = {
-  name: "John",
-};
+class User {
+  constructor(name) {
+    this.name = name;
+  }
 
-user.age = prompt("Введите возраст");
-const clone = {};
-Object.keys(user).forEach((key) => {
-  clone[key] = user[key];
-});
-clone.name = "admin";
-clone.role = "admin";
-export { user };
-export { clone };
+  age = prompt("Введите возраст");
+}
+export { User };
