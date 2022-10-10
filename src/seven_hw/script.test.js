@@ -20,8 +20,6 @@ describe("makeInteactiveList", () => {
     expect(button).toBeTruthy();
     expect(button.innerHTML).toBe("Add");
     expect(button.hidden).toBe(true);
-
-    expect(el.querySelectorAll("p").length).toBe(3);
   });
 
   it("button hidden or appears after input", () => {
