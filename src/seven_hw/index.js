@@ -1,4 +1,3 @@
-/* eslint-disable */
-import { makeInteractiveList } from "./script.js";
-/* eslint-enable */
+import { makeInteractiveList } from "./script";
+
 makeInteractiveList(document.getElementById("app1"));
