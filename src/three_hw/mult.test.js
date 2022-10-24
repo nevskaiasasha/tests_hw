@@ -1,22 +1,20 @@
-import "./mult";
+import { mult } from "./mult";
 
+const logSpy = jest.spyOn(console, "log").mockImplementation();
 describe("mult", () => {
-  it("returns 7 * 1", () => {
+  mult();
+  it("returns table of 7", () => {
     /* eslint-disable no-console */
-    const logSpy = jest.spyOn(console, "log");
-    console.log(`${7}*${1}=${7} `);
-    expect(logSpy).toHaveBeenCalledWith(`${7}*${1}=${7} `);
+    expect(logSpy).toHaveBeenCalledWith(`
+    7*1=7
+    7*2=14
+    7*3=21
+    7*4=28
+    7*5=35
+    7*6=42
+    7*7=49
+    7*8=56
+    7*9=63`);
     /* eslint-enable no-console */
-  });
-  it("returns 7 * 2", () => {
-    /* eslint-disable no-console */
-    const logSpy = jest.spyOn(console, "log");
-    console.log(`${7}*${2}=${7} `);
-    expect(logSpy).toHaveBeenCalledWith(`${7}*${2}=${7} `);
-    /* eslint-enable no-console */
-  });
-  it("expects calling", () => {
-    const logSpy = jest.spyOn(console, "log");
-    expect(logSpy).toHaveBeenCalledTimes(2);
   });
 });

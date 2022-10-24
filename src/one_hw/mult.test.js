@@ -1,20 +1,11 @@
-import { mult, su } from "./mult";
+import { mult } from "./mult";
 
+const logSpy = jest.spyOn(console, "log").mockImplementation();
 describe("mult", () => {
   it("multiplies numbers", () => {
     mult(2, 3);
     /* eslint-disable no-console */
-    const logSpy = jest.spyOn(console, "log");
-    console.log(6);
-    expect(logSpy).toHaveBeenCalledWith(6);
-  });
-});
-describe("sum", () => {
-  su(1, 3);
-  it("sum numbers", () => {
-    const logSpy = jest.spyOn(console, "log");
-    console.log(4);
-    expect(logSpy).toHaveBeenCalledWith(4);
+    expect(logSpy).toHaveBeenCalledWith(5, 6);
     /* eslint-enable no-console */
   });
 });

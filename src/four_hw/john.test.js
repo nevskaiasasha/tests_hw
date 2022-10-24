@@ -14,6 +14,12 @@ describe("objects", () => {
     adm.role = "admin";
     expect(adm).toHaveProperty("role");
   });
+  it("should destructure an object", () => {
+    const { name, age, role } = adm;
+    expect(name).toBe("admin");
+    expect(age).toBe(12);
+    expect(role).toBe("admin");
+  });
   afterAll(() => {
     jest.clearAllMocks();
   });
