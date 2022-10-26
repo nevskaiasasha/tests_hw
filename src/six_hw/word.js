@@ -1,5 +1,5 @@
 function isWord(str) {
-  if (str.split(" ").length > 1) {
+  if (str.trim().split(" ").length > 1) {
     return false;
   }
   return true;

@@ -1,10 +1,10 @@
-import "./cycles";
+import { summ } from "./cycles";
 
 describe("summ", () => {
   it("sums numbers", () => {
     /* eslint-disable no-console */
     const logSpy = jest.spyOn(console, "log");
-    console.log(3825);
+    summ();
     expect(logSpy).toHaveBeenCalledWith(3825);
     /* eslint-enable no-console */
   });

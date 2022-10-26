@@ -6,10 +6,7 @@ function makeArray(arr) {
   /* eslint-disable no-console */
   console.log(sum);
   /* eslint-enable no-console */
-  const multArr = [...arr];
-  for (let i = 0; i < arr.length; i += 1) {
-    multArr[i] *= 2;
-  }
+  const multArr = arr.map((item) => item * 2);
   return multArr;
 }
 export { makeArray };

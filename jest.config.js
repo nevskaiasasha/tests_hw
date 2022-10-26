@@ -9,6 +9,7 @@ module.exports = {
 
   // Stop running tests after `n` failures
   // bail: 0,
+  globalSetup: "<rootDir>/global-setup.js",
 
   // The directory where Jest should store its cached dependency information
   // cacheDirectory: "C:\\Users\\Aleksandra\\AppData\\Local\\Temp\\jest",

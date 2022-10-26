@@ -7,15 +7,11 @@ export function makeInteractiveList(el) {
   button.innerHTML = "Add";
   button.hidden = true;
 
-  function addElement(text) {
-    const p = document.createElement("p");
-    p.innerHtml = text;
-    el.append(p);
+  function addElement() {
+    const par = document.createElement("p");
+    par.innerHTML = `<p> ${input.value} </p>`;
+    el.append(par);
   }
-
-  addElement("first");
-  addElement("second");
-  addElement("third");
 
   input.addEventListener("input", () => {
     button.hidden = input.value === "";
